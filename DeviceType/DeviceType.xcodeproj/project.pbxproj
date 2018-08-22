@@ -16,6 +16,7 @@
 		845E5DBD21216ABA00034FE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845E5DBC21216ABA00034FE6 /* Assets.xcassets */; };
 		845E5DC021216ABA00034FE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845E5DBE21216ABA00034FE6 /* LaunchScreen.storyboard */; };
 		845E5DC321216ABA00034FE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845E5DC221216ABA00034FE6 /* main.m */; };
+		84A3200F212CF8F6003BD1C6 /* UIDevice+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A3200E212CF8F6003BD1C6 /* UIDevice+Colors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		845E5DBF21216ABA00034FE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		845E5DC121216ABA00034FE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845E5DC221216ABA00034FE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84A3200D212CF8F6003BD1C6 /* UIDevice+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Colors.h"; sourceTree = "<group>"; };
+		84A3200E212CF8F6003BD1C6 /* UIDevice+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Colors.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 		844EBD3C2126A49500BEF78C /* CCUtil */ = {
 			isa = PBXGroup;
 			children = (
+				84A3200C212CF8F6003BD1C6 /* Category */,
 				844EBD3D2126A49500BEF78C /* CCProcessInfoUtil.m */,
 				844EBD3E2126A49500BEF78C /* CCDeviceUtil.m */,
 				844EBD3F2126A49500BEF78C /* CCSandBoxUtil.h */,
@@ -92,6 +96,15 @@
 				845E5DC221216ABA00034FE6 /* main.m */,
 			);
 			path = DeviceType;
+			sourceTree = "<group>";
+		};
+		84A3200C212CF8F6003BD1C6 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				84A3200D212CF8F6003BD1C6 /* UIDevice+Colors.h */,
+				84A3200E212CF8F6003BD1C6 /* UIDevice+Colors.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +186,7 @@
 				844EBD432126A49500BEF78C /* CCProcessInfoUtil.m in Sources */,
 				845E5DC321216ABA00034FE6 /* main.m in Sources */,
 				844EBD442126A49500BEF78C /* CCDeviceUtil.m in Sources */,
+				84A3200F212CF8F6003BD1C6 /* UIDevice+Colors.m in Sources */,
 				845E5DB521216AB800034FE6 /* AppDelegate.m in Sources */,
 				844EBD452126A49500BEF78C /* CCSandBoxUtil.m in Sources */,
 			);

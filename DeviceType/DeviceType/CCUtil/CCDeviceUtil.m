@@ -301,6 +301,15 @@
 }
 
 
++ (BOOL)isSimulator {
+    CCDeviceType type = [self deviceModelType];
+    if (type == Simulator) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
 
 + (BOOL)isIPhoneX{
     static BOOL isIPhoneX = NO;

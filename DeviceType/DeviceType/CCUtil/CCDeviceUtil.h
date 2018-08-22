@@ -115,6 +115,9 @@ typedef NS_ENUM(NSInteger,CCDeviceType) {
 /** app名称 */
 + (NSString *)appName;
 
+/** 判断设备是否为 Simulator */
++ (BOOL)isSimulator;
+
 /** 判断设备是否为 iPhone X */
 + (BOOL)isIPhoneX;
 

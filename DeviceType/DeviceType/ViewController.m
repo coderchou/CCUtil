@@ -11,6 +11,8 @@
 #import "CCDeviceUtil.h"
 #import "CCProcessInfoUtil.h"
 
+#import "UIDevice+Colors.h"
+
 @interface ViewController ()
 
 @end
@@ -28,6 +30,13 @@
     NSLog(@"是否iPhone X : %d",flag );
     
     [CCProcessInfoUtil logProcessInfo];
+    
+    if ([CCDeviceUtil isSimulator]) {
+        self.view.backgroundColor = [UIColor whiteColor];
+    } else {    //根据机身背景色设置view的颜色
+        self.view.backgroundColor = [[UIDevice currentDevice] bbu_enclosureColor];
+    }
+    
 }
 
 
