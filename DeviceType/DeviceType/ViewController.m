@@ -23,7 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    NSLog(@"deviceModelType : %zd, deviceModelName : %@, deviceName :  %@",[CCDeviceUtil deviceModelType],[CCDeviceUtil deviceModelName],[CCDeviceUtil deviceName]);
+    NSLog(@"deviceModelType : %ld, deviceModelName : %@, deviceName :  %@",(long)[CCDeviceUtil deviceModelType],[CCDeviceUtil deviceModelName],[CCDeviceUtil deviceName]);
     NSLog(@"%@",[CCDeviceUtil deviceInfoDictionary]);
 
     BOOL flag = [CCDeviceUtil isIPhoneX];
