@@ -47,9 +47,9 @@
     //获取运行该进程的系统的物理内存
     NSLog(@"运行该进程的系统的物理内存为：%lld", [processInfo physicalMemory]);
     //获取运行该进程的系统的处理器数量
-    NSLog(@"运行该进程的系统的处理器数量为：%ld", [processInfo processorCount]);
+    NSLog(@"运行该进程的系统的处理器数量为：%lu", (unsigned long)[processInfo processorCount]);
     //获取运行该进程的系统的处于激活状态的处理器数量
-    NSLog(@"运行该进程的系统的处于激活状态的处理器数量为：%ld", [processInfo activeProcessorCount]);
+    NSLog(@"运行该进程的系统的处于激活状态的处理器数量为：%lu", (unsigned long)[processInfo activeProcessorCount]);
     //获取运行该进程的系统已运行的时间
     NSLog(@"运行该进程的系统的已运行时间为：%f", [processInfo systemUptime]);
     //全球唯一标识
