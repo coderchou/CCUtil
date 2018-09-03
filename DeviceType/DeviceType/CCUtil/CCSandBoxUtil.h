@@ -38,7 +38,7 @@ typedef NS_ENUM(NSInteger, CCSandBoxDirectoryType) {
 + (NSString *)homePath;
 
 /**
- 文档目录 : 用来存放仅限于不可再生的数据文件，会被iTunes同步。
+ 文档目录 : 只有用户创建的，并且不能被App重现的文档、数据，才应该被保存在“/Documents”路径下。会被iTunes同步。
  相对路径 : /Documents
  */
 + (NSString *)documentPath;
@@ -59,7 +59,7 @@ typedef NS_ENUM(NSInteger, CCSandBoxDirectoryType) {
 
 
 /**
- 缓存目录 : 系统永远不会删除这里的文件，iTunes会删除
+ 缓存目录 : 可以重新产生、下载的数据可以放在“/Library/Caches”目录下，如用于缓存的数据库文件。不会被iTunes同步
  相对路径 : /Library/Caches
  */
 + (NSString *)cachePath;
@@ -73,7 +73,7 @@ typedef NS_ENUM(NSInteger, CCSandBoxDirectoryType) {
 
 
 /**
- 获取沙盒指定目录路径
+ 根据directoryType,获取路径
  */
 + (NSString *)pathForDirectoryType:(CCSandBoxDirectoryType)directoryType;
 
@@ -85,5 +85,33 @@ typedef NS_ENUM(NSInteger, CCSandBoxDirectoryType) {
 + (NSString *)mkdir:(NSString *)relativePath directoryType:(CCSandBoxDirectoryType)directoryType;
 + (NSString *)rmdir:(NSString *)relativePath directoryType:(CCSandBoxDirectoryType)directoryType;
 
+
+
+/**
+ important tips :
+ 根据官方文档“File System Programming Guide”(https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html#//apple_ref/doc/uid/TP40010672-CH2-SW1)
+ 可以整理出两个系统可能会清除的目录：（在储存空间不够时）
+ 
+ 1.Library/Caches/
+ 2.tmp/
+ 所以，像App下载的歌曲等资源文件是不能放在上面两个目录中的。
+ 
+ 为了保险起见，重要的文件最靠谱的还是放在/Documents中，并且通过设置，不让iCloud备份。
+ 
+ Apple已经提供了相应的函数，如下（iOS 5.1及以后的版本）：
+ 
+ - (BOOL)addSkipBackupAttributeToItemAtURL:(NSURL *)URL {
+ assert([[NSFileManager defaultManager] fileExistsAtPath: [URL path]]);
+ 
+ NSError *error = nil;
+ BOOL success = [URL setResourceValue: [NSNumber numberWithBool: YES]
+ forKey: NSURLIsExcludedFromBackupKey error: &error];
+ if(!success){
+ NSLog(@"Error excluding %@ from backup %@", [URL lastPathComponent], error);
+ }
+ return success;
+ }
+
+ */
 
 @end
