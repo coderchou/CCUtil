@@ -33,13 +33,13 @@
 
     NSLog(@"%@",[CCSandBoxUtil pathForDirectoryType:CCSandBoxDirectoryTypeLibrary]);
     
-//    NSString *string = [NSString stringWithFormat:@"%@//test",[CCSandBoxUtil tmpPath]];
-//    NSLog(@"%@",[CCSandBoxUtil mkdir:string]);
+    NSString *string = [NSString stringWithFormat:@"%@//test",[CCSandBoxUtil tmpPath]];
+    NSLog(@"%@",[CCSandBoxUtil mkdir:string]);
     
     
-//    NSLog(@"%@",[CCSandBoxUtil mkdir:@"haha" directoryType:CCSandBoxDirectoryTypeTmp]);
+    NSLog(@"%@",[CCSandBoxUtil mkdir:@"haha" directoryType:CCSandBoxDirectoryTypeTmp]);
     
-//    NSLog(@"%@",[CCSandBoxUtil rmdir:@"/haha" directoryType:CCSandBoxDirectoryTypeTmp]);
+    NSLog(@"%@",[CCSandBoxUtil rmdir:@"/haha" directoryType:CCSandBoxDirectoryTypeTmp]);
     
     
     return YES;
