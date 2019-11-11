@@ -26,7 +26,7 @@
     NSLog(@"deviceModelType : %ld, deviceModelName : %@, deviceName :  %@",(long)[CCDeviceUtil deviceModelType],[CCDeviceUtil deviceModelName],[CCDeviceUtil deviceName]);
     NSLog(@"%@",[CCDeviceUtil deviceInfoDictionary]);
 
-    BOOL flag = [CCDeviceUtil isIPhoneX];
+    BOOL flag = [CCDeviceUtil is_iPhoneX_Series];
     NSLog(@"是否iPhone X : %d",flag );
     
     [CCProcessInfoUtil logProcessInfo];

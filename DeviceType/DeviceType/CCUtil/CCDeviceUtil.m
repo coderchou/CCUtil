@@ -46,6 +46,13 @@
     if([platform isEqualToString:@"iPhone10,5"])    return IPhone_8P;
     if([platform isEqualToString:@"iPhone10,3"])    return IPhone_X;
     if([platform isEqualToString:@"iPhone10,6"])    return IPhone_X;
+    if([platform isEqualToString:@"iPhone11,8"])    return IPhone_XR;
+    if([platform isEqualToString:@"iPhone11,2"])    return IPhone_XS;
+    if([platform isEqualToString:@"iPhone11,6"])    return IPhone_XS_Max;
+    if([platform isEqualToString:@"iPhone12,1"])    return IPhone_11;
+    if([platform isEqualToString:@"iPhone12,3"])    return IPhone_11_Pro;
+    if([platform isEqualToString:@"iPhone12,5"])    return IPhone_11_Pro_MAX;
+
     
     //iPod Touch
     if([platform isEqualToString:@"iPod1,1"])   return IPod_Touch;
@@ -54,6 +61,8 @@
     if([platform isEqualToString:@"iPod4,1"])   return IPod_Touch_4;
     if([platform isEqualToString:@"iPod5,1"])   return IPod_Touch_5;
     if([platform isEqualToString:@"iPod7,1"])   return IPod_Touch_6;
+    if([platform isEqualToString:@"iPod9,1"])   return IPod_Touch_7;
+    
     
     //iPad
     if([platform isEqualToString:@"iPad1,1"])   return IPad;
@@ -81,11 +90,14 @@
     if([platform isEqualToString:@"iPad4,3"])   return IPad_Air;
     if([platform isEqualToString:@"iPad5,3"])   return IPad_Air_2;
     if([platform isEqualToString:@"iPad5,4"])   return IPad_Air_2;
+    if([platform isEqualToString:@"iPad11,3"])  return IPad_Air_3;
+    if([platform isEqualToString:@"iPad11,4"])  return IPad_Air_3;
+
     
     //iPad mini
     if([platform isEqualToString:@"iPad2,5"])   return IPad_mini;
     if([platform isEqualToString:@"iPad2,6"])   return IPad_mini;
-    if([platform isEqualToString:@"iPad2,7"])   return IPad_mini_1;
+    if([platform isEqualToString:@"iPad2,7"])   return IPad_mini;
     if([platform isEqualToString:@"iPad4,4"])   return IPad_mini_2;
     if([platform isEqualToString:@"iPad4,5"])   return IPad_mini_2;
     if([platform isEqualToString:@"iPad4,6"])   return IPad_mini_2;
@@ -94,6 +106,8 @@
     if([platform isEqualToString:@"iPad4,9"])   return IPad_mini_3;
     if([platform isEqualToString:@"iPad5,1"])   return IPad_mini_4;
     if([platform isEqualToString:@"iPad5,2"])   return IPad_mini_4;
+    if([platform isEqualToString:@"iPad11,1"])  return IPad_mini_5;
+    if([platform isEqualToString:@"iPad11,2"])  return IPad_mini_5;
     
     
     //1th iPad Pro
@@ -104,8 +118,27 @@
     //2th iPad Pro
     if([platform  isEqualToString:@"iPad7,1"])  return IPad_Pro_12_9_inch_2nd_generation;
     if([platform  isEqualToString:@"iPad7,2"])  return IPad_Pro_12_9_inch_2nd_generation;
+    //3th iPad Pro
+    if([platform  isEqualToString:@"iPad8,5"])  return IPad_Pro_12_9_inch_3nd_generation;
+    if([platform  isEqualToString:@"iPad8,6"])  return IPad_Pro_12_9_inch_3nd_generation;
+    if([platform  isEqualToString:@"iPad8,7"])  return IPad_Pro_12_9_inch_3nd_generation;
+    if([platform  isEqualToString:@"iPad8,8"])  return IPad_Pro_12_9_inch_3nd_generation;
+
+    
     if([platform  isEqualToString:@"iPad7,3"])  return IPad_Pro_10_5_inch;
     if([platform  isEqualToString:@"iPad7,4"])  return IPad_Pro_10_5_inch;
+    if([platform  isEqualToString:@"iPad8,1"])  return IPad_Pro_11_inch;
+    if([platform  isEqualToString:@"iPad8,2"])  return IPad_Pro_11_inch;
+    if([platform  isEqualToString:@"iPad8,3"])  return IPad_Pro_11_inch;
+    if([platform  isEqualToString:@"iPad8,4"])  return IPad_Pro_11_inch;
+
+
+
+
+
+    
+    
+    
     
     //Apple Watch
     if([platform isEqualToString:@"Watch1,1"])   return Apple_Watch;   //(1st generation)
@@ -118,7 +151,10 @@
     if([platform isEqualToString:@"Watch3,2"])   return Apple_Watch_Series_3;
     if([platform isEqualToString:@"Watch3,3"])   return Apple_Watch_Series_3;
     if([platform isEqualToString:@"Watch3,4"])   return Apple_Watch_Series_3;
-    
+    if([platform isEqualToString:@"Watch4,1"])   return Apple_Watch_Series_4;
+    if([platform isEqualToString:@"Watch4,2"])   return Apple_Watch_Series_4;
+    if([platform isEqualToString:@"Watch4,3"])   return Apple_Watch_Series_4;
+    if([platform isEqualToString:@"Watch4,4"])   return Apple_Watch_Series_4;
     
     //iPhone Simulator
     if([platform isEqualToString:@"i386"])          return Simulator;
@@ -162,6 +198,13 @@
     if([platform isEqualToString:@"iPhone10,5"]) return @"iPhone 8 Plus";
     if([platform isEqualToString:@"iPhone10,3"]) return @"iPhone X";
     if([platform isEqualToString:@"iPhone10,6"]) return @"iPhone X";
+    if([platform isEqualToString:@"iPhone11,8"]) return @"iPhone XR";
+    if([platform isEqualToString:@"iPhone11,2"]) return @"iPhone XS";
+    if([platform isEqualToString:@"iPhone11,6"]) return @"iPhone XS Max";
+    
+    if([platform isEqualToString:@"iPhone12,1"]) return @"iPhone 11";
+    if([platform isEqualToString:@"iPhone12,3"]) return @"iPhone 11 Pro";
+    if([platform isEqualToString:@"iPhone12,5"]) return @"iPhone 11 Pro Max";
     
     //iPod Touch
     if([platform isEqualToString:@"iPod1,1"])   return @"iPod Touch";
@@ -170,6 +213,7 @@
     if([platform isEqualToString:@"iPod4,1"])   return @"iPod Touch 4)";
     if([platform isEqualToString:@"iPod5,1"])   return @"iPod Touch 5";
     if([platform isEqualToString:@"iPod7,1"])   return @"iPod Touch 6";
+    if([platform isEqualToString:@"iPod9,1"])   return @"iPod Touch 7";
     
     //iPad
     if([platform isEqualToString:@"iPad1,1"])   return @"iPad";
@@ -197,11 +241,14 @@
     if([platform isEqualToString:@"iPad4,3"])   return @"iPad Air";
     if([platform isEqualToString:@"iPad5,3"])   return @"iPad Air 2";
     if([platform isEqualToString:@"iPad5,4"])   return @"iPad Air 2";
+    if([platform isEqualToString:@"iPad11,3"])  return @"iPad Air (3rd generation)";
+    if([platform isEqualToString:@"iPad11,4"])  return @"iPad Air (3rd generation)";
+
     
     //iPad mini
     if([platform isEqualToString:@"iPad2,5"])   return @"iPad mini";
     if([platform isEqualToString:@"iPad2,6"])   return @"iPad mini";
-    if([platform isEqualToString:@"iPad2,7"])   return @"iPad mini 1";
+    if([platform isEqualToString:@"iPad2,7"])   return @"iPad mini";
     if([platform isEqualToString:@"iPad4,4"])   return @"iPad mini 2";
     if([platform isEqualToString:@"iPad4,5"])   return @"iPad mini 2";
     if([platform isEqualToString:@"iPad4,6"])   return @"iPad mini 2";
@@ -210,7 +257,9 @@
     if([platform isEqualToString:@"iPad4,9"])   return @"iPad mini 3";
     if([platform isEqualToString:@"iPad5,1"])   return @"iPad mini 4";
     if([platform isEqualToString:@"iPad5,2"])   return @"iPad mini 4";
-    
+    if([platform isEqualToString:@"iPad11,1"])  return @"iPad mini (5th generation)";
+    if([platform isEqualToString:@"iPad11,2"])  return @"iPad mini (5th generation)";
+
     
     //1th iPad Pro
     if([platform  isEqualToString:@"iPad6,3"])  return @"iPad Pro (9.7 inch)";
@@ -220,8 +269,23 @@
     //2th iPad Pro
     if([platform  isEqualToString:@"iPad7,1"])  return @"iPad Pro (12.9-inch, 2nd generation)";
     if([platform  isEqualToString:@"iPad7,2"])  return @"iPad Pro (12.9-inch, 2nd generation)";
+    //3th iPad Pro
+    if([platform  isEqualToString:@"iPad8,5"])  return @"iPad Pro (12.9-inch) (3rd generation)";
+    if([platform  isEqualToString:@"iPad8,6"])  return @"iPad Pro (12.9-inch) (3rd generation)";
+    if([platform  isEqualToString:@"iPad8,7"])  return @"iPad Pro (12.9-inch) (3rd generation)";
+    if([platform  isEqualToString:@"iPad8,8"])  return @"iPad Pro (12.9-inch) (3rd generation)";
+
+    
     if([platform  isEqualToString:@"iPad7,3"])  return @"iPad Pro (10.5 inch)";
     if([platform  isEqualToString:@"iPad7,4"])  return @"iPad Pro (10.5 inch)";
+    if([platform  isEqualToString:@"iPad8,1"])  return @"iPad Pro (11-inch)";
+    if([platform  isEqualToString:@"iPad8,2"])  return @"iPad Pro (11-inch)";
+    if([platform  isEqualToString:@"iPad8,3"])  return @"iPad Pro (11-inch)";
+    if([platform  isEqualToString:@"iPad8,4"])  return @"iPad Pro (11-inch)";
+
+    
+    
+    
     
     
     //Apple Watch
@@ -235,6 +299,11 @@
     if([platform isEqualToString:@"Watch3,2"])   return @"Apple Watch Series 3";
     if([platform isEqualToString:@"Watch3,3"])   return @"Apple Watch Series 3";
     if([platform isEqualToString:@"Watch3,4"])   return @"Apple Watch Series 3";
+    if([platform isEqualToString:@"Watch4,1"])   return @"Apple Watch Series 4";
+    if([platform isEqualToString:@"Watch4,2"])   return @"Apple Watch Series 4";
+    if([platform isEqualToString:@"Watch4,3"])   return @"Apple Watch Series 4";
+    if([platform isEqualToString:@"Watch4,4"])   return @"Apple Watch Series 4";
+
     
     //iPhone Simulator
     if([platform isEqualToString:@"i386"])    return @"iPhone Simulator";
@@ -343,6 +412,19 @@
     
     BOOL isIPhoneX = [platform isEqualToString:@"iPhone10,3"] || [platform isEqualToString:@"iPhone10,6"];
     return isIPhoneX;
+}
+
+
++ (BOOL)is_iPhoneX_Series {
+    CCDeviceType deviceType = [self deviceModelType];
+    BOOL is_iPhoneX = deviceType == IPhone_X ||
+    deviceType == IPhone_XR ||
+    deviceType == IPhone_XS ||
+    deviceType == IPhone_XS_Max ||
+    deviceType == IPhone_11 ||
+    deviceType == IPhone_11_Pro ||
+    deviceType == IPhone_11_Pro_MAX;
+    return is_iPhoneX;
 }
 
 

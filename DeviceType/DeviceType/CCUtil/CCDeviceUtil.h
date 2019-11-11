@@ -12,7 +12,7 @@
 
 /**
  refer to https://www.theiphonewiki.com/wiki/Models#iPhone
- update by 2018.08.15
+ update by 2019.11.11
  */
 typedef NS_ENUM(NSInteger,CCDeviceType) {
     Unknown = 0,
@@ -37,6 +37,12 @@ typedef NS_ENUM(NSInteger,CCDeviceType) {
     IPhone_8,
     IPhone_8P,
     IPhone_X,
+    IPhone_XR,
+    IPhone_XS,
+    IPhone_XS_Max,
+    IPhone_11,
+    IPhone_11_Pro,
+    IPhone_11_Pro_MAX,
     
     IPod_Touch,
     IPod_Touch_2,
@@ -44,6 +50,7 @@ typedef NS_ENUM(NSInteger,CCDeviceType) {
     IPod_Touch_4,
     IPod_Touch_5,
     IPod_Touch_6,
+    IPod_Touch_7,
     
     IPad,
     IPad_2,
@@ -54,22 +61,26 @@ typedef NS_ENUM(NSInteger,CCDeviceType) {
     
     IPad_Air,
     IPad_Air_2,
+    IPad_Air_3,
     
     IPad_mini,
-    IPad_mini_1,
     IPad_mini_2,
     IPad_mini_3,
     IPad_mini_4,
+    IPad_mini_5,
     
     IPad_Pro_9_7_inch,
     IPad_Pro_12_9_inch,
     IPad_Pro_12_9_inch_2nd_generation,
+    IPad_Pro_12_9_inch_3nd_generation,
     IPad_Pro_10_5_inch,
+    IPad_Pro_11_inch,
     
     Apple_Watch,  //Apple_Watch (1st generation)
     Apple_Watch_Series_1,
     Apple_Watch_Series_2,
     Apple_Watch_Series_3,
+    Apple_Watch_Series_4,
 };
 
 
@@ -118,8 +129,9 @@ typedef NS_ENUM(NSInteger,CCDeviceType) {
 /** 判断设备是否为 Simulator */
 + (BOOL)isSimulator;
 
-/** 判断设备是否为 iPhone X */
-+ (BOOL)isIPhoneX;
+/** 判断设备是否为 iPhone X系列, 全面屏 */
++ (BOOL)is_iPhoneX_Series;
+//+ (BOOL)isIPhoneX;
 
 /** 判断真机是否越狱 */
 + (BOOL)isJailBreak;
