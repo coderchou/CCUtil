@@ -26,6 +26,10 @@
     NSLog(@"%@",[CCSandBoxUtil cachePath]);
     NSLog(@"%@",[CCSandBoxUtil tmpPath]);
     
+    NSLog(@"y一个测试");
+    NSLog(@"一个打印");
+    
+    
 
     NSLog(@"%@",[CCSandBoxUtil pathForDirectoryType:CCSandBoxDirectoryTypeLibrary]);
     
